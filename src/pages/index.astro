@@ -1,0 +1,433 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Juan David Taborda - Desarrollador Backend">
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><span>Dev</span> Juan David Taborda</a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+                    <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+                    <li><a href="#contacto" class="nav__button">Contáctame</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+	<section id="inicio" class="section fade-in-section">
+		<div class="hero">
+            <div class="hero__text">
+                <h1>Juan David Taborda</h1>
+                <h2>Desarrollador Backend</h2>
+                <p>Transformo problemas complejos de negocio en soluciones de software robustas y eficientes. Mi especialidad se centra en la construcción de APIs escalables y sistemas backend utilizando Java con Spring Boot, Python y SQL.</p>
+            <div class="hero__buttons">
+                <div class="dropdown">
+                <button class="button" id="cvButton">Descargar CV</button>
+                <div class="dropdown-content" id="cvDropdown">
+                    <a href="/CV-Juan-David-Taborda-Español.pdf" download>Español</a>
+                    <a href="/CV-Juan-David-Taborda-English.pdf" download>Inglés</a>
+                </div>
+            </div>
+                <a href="#contacto" class="button button-outline">Contáctame</a>
+            </div>
+            </div>
+
+			<img class="hero__image" src="/foto-personal.jpg" alt="Foto de Juan David Taborda">
+
+		</div>
+	</section>
+
+        <section id="sobre-mi" class="section fade-in-section">
+            <h2 class="section__title">Sobre Mí</h2>
+            <div class="about__container">
+                <div class="card">
+                    <h3>¿Quién Soy?</h3>
+                    <p>Desarrollador con experiencia en automatización y procesos ETL, aplicando principios de backend para crear soluciones robustas.</p>
+                </div>
+                <div class="card">
+                    <h3>Mi Objetivo</h3>
+                    <p>Busco aplicar mis habilidades para construir APIs y sistemas escalables, contribuyendo a un equipo de desarrollo y aprendiendo continuamente.</p>
+                </div>
+                <div class="card">
+                    <h3>Mi Perfil</h3>
+                    <p>Me caracterizo por mi aprendizaje rápido, pensamiento analítico y un fuerte enfoque en la solución de problemas complejos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="habilidades" class="section fade-in-section">
+            <h2 class="section__title">Habilidades Técnicas</h2>
+            <div class="skills__container">
+                <div class="skill__item"><i class="devicon-python-plain"></i> Python</div>
+                <div class="skill__item"><i class="devicon-mysql-plain"></i> SQL</div>
+                <div class="skill__item"><i class="devicon-java-plain"></i> Java</div>
+                <div class="skill__item"><i class="devicon-spring-plain"></i> Spring Boot</div>
+                <div class="skill__item"><i class="devicon-git-plain"></i> Git</div>
+                <div class="skill__item"><i class="devicon-bash-plain"></i> Bash</div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section container-wide">
+            <h2 class="section__title">Proyectos Backend</h2>
+            <div class="projects__container">
+            <a href="proyecto-crawler" class="project__card" target="_blank">
+                <img src="web-crawler.png" alt="Imagen del proyecto Web Crawler" class="project__image">
+                <div class="project__info">
+                    <h3>API de Web Scraping con Spring Boot</h3>
+                    <p>Este proyecto es una aplicación backend construida con Java y Spring Boot que implementa un web crawler...</p>
+                    <span class="project__tags">Java - Spring Boot - Web Scraping - JPA - REST API</span>
+                </div>
+            </a>
+
+            <a href="proyecto-blog" class="project__card" target="_blank">
+                <img src="/Blog-api.png" alt="Imagen del proyecto Blog API" class="project__image">
+                <div class="project__info">
+                    <h3>API REST para Blog con Seguridad JWT</h3>
+                    <p>Este proyecto es una API RESTful construida con Spring Boot para la gestión de un blog...</p>
+                    <span class="project__tags">Java - Spring Boot - Spring Security - JWT - REST API</span>
+                </div>
+            </a>
+
+            <a href="proyecto-ecommerce" class="project__card" target="_blank">
+                <img src="ecommerce-api.png" alt="Imagen del proyecto E-commerce API" class="project__image">
+                <div class="project__info">
+                    <h3>API REST para E-commerce con Roles de Usuario</h3>
+                    <p>Este proyecto es una API RESTful para una plataforma de e-commerce, desarrollada con Java y Spring Boot...</p>
+                    <span class="project__tags">Java - Spring Boot - Spring Security - JPA - E-commerce</span>
+                </div>
+            </a>
+                        </div>
+        </section>
+                <section id="contacto" class="section fade-in-section">
+            <div class="container">
+                <h2 class="section__title">Trabajemos Juntos</h2>
+                <p class="contact__text">Estoy siempre abierto a discutir nuevos proyectos e ideas. Si mi perfil te interesa, no dudes en contactarme a través de estos canales.</p>
+                <div class="contact__links">
+                    <a href="https://wa.me/573105052007" class="button" target="_blank">WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/juandavidtl" class="button" target="_blank">LinkedIn</a>
+                    <a href="mailto:juandavidtl1998@gmail.com" class="button" target="_blank">Correo Electrónico</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<style>
+        .container { max-width: 968px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 3rem 0; }
+        .section__title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
+
+        .header { width: 100%; position: fixed; top: 0; left: 0; background-color: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); z-index: 100; }
+        .nav { height: var(--header-height); display: flex; justify-content: space-between; align-items: center; }
+        .nav__logo { font-weight: 600; }
+        .nav__list { display: flex; list-style: none; gap: 2rem; }
+        .nav__list a { color: var(--text-color); font-weight: 500; }
+        
+        
+        .hero { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 2rem; 
+            align-items: center; 
+            padding-top: var(--header-height); 
+            text-align: center;
+            padding-top: 10rem; 
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 768px) { 
+            .hero { 
+                grid-template-columns: 2fr 1fr; 
+                text-align: left; 
+            } 
+        }
+        .hero h1 { 
+            font-size: 2.8rem; 
+            margin-bottom: 0.5rem; 
+            color: #ffffff; /* Título en blanco */
+        }
+        .hero h2 { 
+            font-size: 1.5rem; 
+            color: var(--primary-color); 
+            margin-bottom: 1rem; 
+        }
+        .hero p { 
+            font-size: 1.1rem; 
+            max-width: 600px; 
+            margin-inline: auto; 
+        }
+        @media (min-width: 768px) { 
+            .hero p { 
+                margin-inline: 0; 
+            } 
+        }
+        .hero__image { 
+            max-width: 250px; 
+            border-radius: 50%; 
+            border: 4px solid var(--primary-color); 
+            justify-self: center; 
+            height: auto;
+        }
+        .hero__buttons { 
+            display: flex; 
+            gap: 1rem; 
+            margin-top: 2rem; 
+      
+            justify-content: center; 
+        }
+
+    
+        @media (min-width: 768px) { 
+            .hero__buttons { 
+                justify-content: flex-start; 
+            } 
+        }
+        .button { 
+            display: inline-block; 
+            background-color: var(--primary-color); 
+            color: #000; 
+            padding: 0.9rem 1.75rem; 
+            border-radius: .5rem; 
+            font-weight: 600; 
+            transition: .3s; 
+        }
+        .button:hover { 
+            transform: translateY(-3px); 
+        }
+        .button-outline { 
+            background-color: transparent; 
+            border: 2px solid var(--primary-color); 
+            color: var(--primary-color); 
+        }
+        
+        
+        .about__container { 
+            display: grid; 
+            gap: 1.5rem; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        }
+        .card { 
+            background-color: var(--card-color); 
+            padding: 2rem; 
+            border-radius: .75rem; 
+            border: 1px solid #334155; 
+        }
+        .card h3 { 
+            margin-bottom: 1rem; 
+            color: var(--primary-color); 
+        }
+
+        .skills__container { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            gap: 2rem; 
+            font-size: 1.2rem; 
+        }
+        .skill__item { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 0.5rem; 
+        }
+        .skill__item i { 
+            font-size: 3rem; 
+            color: var(--primary-color); 
+        }
+
+        .projects__container {
+            display: grid;
+          
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .projects__container {
+             
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects__container {
+             
+                grid-template-columns: 1fr;
+            }
+        }
+        .project__card {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--card-color);
+            border-radius: .75rem;
+            border: 1px solid #334155;
+            color: var(--text-color);
+            transition: transform 0.3s, border-color 0.3s;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        .project__card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        .project__card h3 { 
+            margin-bottom: 0.5rem; 
+        }
+        .project__tags { 
+            display: block; 
+            margin-top: 1rem; 
+            font-size: 0.9rem; 
+            color: var(--primary-color); 
+        }
+
+        .nav__logo {
+            /* Esto pone "Juan David." en blanco */
+            color: #ffffff; 
+            font-weight: 600;
+            font-size: 1.25rem;
+            text-decoration: none;
+        }
+
+        .nav__logo span {
+            /* Esto pone "dev" en azul */
+            color: var(--primary-color); 
+        }
+
+        .nav__link {
+            color: var(--text-color);
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .nav__link:hover {
+            color: var(--primary-color); 
+        }
+              
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none; 
+            position: absolute;
+            background-color: var(--card-color);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: .5rem;
+            border: 1px solid #334155;
+            margin-top: 0.5rem;
+            overflow: hidden; 
+        }
+
+        .dropdown-content a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #334155;
+        }
+
+      
+        .dropdown-content.show {
+            display: block;
+        }
+        
+        .project__image {
+            width: 100%;
+            height: 180px; 
+            object-fit: cover; 
+        }
+
+  
+        .project__info {
+            padding: 1.5rem; 
+        }
+        .card {
+            text-align: center;
+        }
+         .contact__text { 
+            text-align: center; 
+            max-width: 600px; 
+            margin: 0 auto 2.5rem auto;
+         }
+        .contact__links { 
+            display: flex; 
+            justify-content: center;
+             gap: 1.5rem; 
+             flex-wrap: wrap; }
+             
+                /* --- NUEVA ANIMACIÓN ESCALONADA --- */
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px); 
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .fade-in-section {
+            opacity: 0; 
+            animation: fadeInSlideUp 0.8s ease-out forwards; 
+        }
+
+      
+        section#inicio {
+            animation-delay: 0.2s;
+        }
+        section#sobre-mi {
+            animation-delay: 0.4s;
+        }
+        section#habilidades {
+            animation-delay: 0.6s;
+        }
+        section#proyectos {
+            animation-delay: 0.8s;
+        }
+        section#contacto {
+            animation-delay: 1s;
+        }
+</style>
+
+<script></script>
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const cvButton = document.getElementById('cvButton');
+        const cvDropdown = document.getElementById('cvDropdown');
+
+        if (cvButton && cvDropdown) {
+            
+            cvButton.addEventListener('click', function(event) {
+            event.stopPropagation();
+            cvDropdown.classList.toggle('show');
+            });
+
+            window.addEventListener('click', function(event) {
+           
+            if (!cvButton.contains(event.target as Node)) {
+                if (cvDropdown.classList.contains('show')) {
+                cvDropdown.classList.remove('show');
+                }
+            }
+            });
+        }
+    });
+    </script>
+</Layout>

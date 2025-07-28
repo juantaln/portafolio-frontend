@@ -1,0 +1,43 @@
+---
+
+import Layout from './Layout.astro';
+---
+<Layout>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/#proyectos" class="nav__link">← Volver a Proyectos</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="project-detail">
+            <slot />
+        </section>
+    </main>
+</Layout>
+
+<style>
+    /* Estilos SOLO para la plantilla */
+    .header { 
+        width: 100%; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        background-color: rgba(15, 23, 42, 0.8); 
+        backdrop-filter: blur(10px); 
+        z-index: 100; 
+    }
+    .nav { 
+        height: var(--header-height); 
+        display: flex; 
+        align-items: center; 
+    }
+    .nav__link { 
+        color: var(--text-color); 
+        font-weight: 500; 
+        text-decoration: none; 
+    }
+    .project-detail { 
+        padding-top: 6rem; 
+    }
+</style>

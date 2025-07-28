@@ -1,0 +1,164 @@
+---
+
+import LayoutProject from '../layouts/LayoutProject.astro';
+---
+
+<LayoutProject>
+    <h1 class="project-title">API REST para Blog con Seguridad JWT</h1>
+
+    <div class="project-section">
+        <h2 class="section-heading">Resumen del Proyecto</h2>
+        <p class="section-text">
+            Este proyecto consiste en una API RESTful completamente funcional para una plataforma de blog, desarrollada con Java y Spring Boot. El sistema permite la gestión de usuarios y publicaciones, con un fuerte enfoque en la seguridad. La API soporta el registro de nuevos usuarios, la autenticación y la administración de posts mediante operaciones CRUD, todo protegido por un esquema de seguridad basado en tokens.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/juantaln/blog_api" class="button-outline" target="_blank">Ver Repositorio (GitHub)</a>
+            <a href="https://blog-api-9yxz.onrender.com" class="button" target="_blank">Ver Demo en Vivo (Render)</a>
+        </div>
+    </div>
+
+    <div class="project-section">
+        <h2 class="section-heading">Conceptos y Prácticas Implementadas</h2>
+        <ul class="concepts-list">
+            <li>
+                <strong>Autenticación y Autorización con Spring Security:</strong> Se implementó un sistema de seguridad robusto utilizando Spring Security para proteger los endpoints de la API. El acceso a las operaciones de creación, actualización y eliminación de posts está restringido únicamente a usuarios autenticados.
+            </li>
+            <li>
+                <strong>Seguridad Basada en Tokens (JWT):</strong> El proceso de autenticación genera un JSON Web Token (JWT) para el usuario. Este token se debe incluir en las cabeceras de las solicitudes posteriores para acceder a los recursos protegidos, garantizando una comunicación segura y sin estado (stateless).
+            </li>
+            <li>
+                <strong>Arquitectura RESTful:</strong> La API está diseñada siguiendo los principios REST, con endpoints claros y predecibles para la gestión de recursos como usuarios (`/api/auth`) y posts (`/api/posts`). Se utilizan los verbos HTTP de manera semántica para cada operación.
+            </li>
+            <li>
+                <strong>Capa de Persistencia con JPA/Hibernate:</strong> Se gestiona la interacción con la base de datos (MySQL) a través de Spring Data JPA. Las entidades `User` y `Post` están mapeadas a sus respectivas tablas, y los repositorios abstraen la lógica de acceso a datos.
+            </li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <h2 class="section-heading">Demostración del Proyecto</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <h3>Explicación en Español</h3>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/-SY7wmVeawc?si=tLX-1oq8B9uNmyYD" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-container">
+                <h3>Explicación en Inglés</h3>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/3_282vKu6GE?si=ipAMi7rLlwvfzmdp" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</LayoutProject>
+
+<style>
+    /* Estilos SOLO para el contenido de esta página */
+    .project-title {
+        font-size: 2.8rem;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 1.5rem;
+    }
+    .project-section {
+        margin-bottom: 3rem;
+    }
+    .section-heading {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+    .section-text, .concepts-list {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        max-width: 850px;
+        color: var(--text-color);
+    }
+    .concepts-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .concepts-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    .concepts-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    .video-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    @media (min-width: 992px) {
+        .video-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .video-container h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    .video-container video {
+        width: 100%;
+        border-radius: .5rem;
+        border: 1px solid #334155;
+        background-color: #000;
+    }
+   
+    .project-links {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .button, .button-outline {
+        display: inline-block;
+        padding: 0.9rem 1.75rem;
+        border-radius: .5rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.3s;
+    }
+
+    .button:hover, .button-outline:hover {
+        transform: translateY(-3px);
+    }
+
+    .button {
+        background-color: var(--primary-color);
+        color: #000;
+    }
+
+    .button-outline {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+    .video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 de los videos */
+    border-radius: .5rem;
+    border: 1px solid #334155;
+    }
+</style>

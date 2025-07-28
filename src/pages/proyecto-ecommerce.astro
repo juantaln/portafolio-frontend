@@ -1,0 +1,164 @@
+---
+
+import LayoutProject from '../layouts/LayoutProject.astro';
+---
+
+<LayoutProject>
+    <h1 class="project-title">API REST para E-commerce con Pagos y Notificaciones</h1>
+
+    <div class="project-section">
+        <h2 class="section-heading">Resumen del Proyecto</h2>
+        <p class="section-text">
+            Este proyecto es una API RESTful integral para una plataforma de e-commerce, construida con Java y Spring Boot. La aplicación no solo gestiona la lógica de negocio principal, como el control de productos, usuarios y órdenes, sino que también se integra con servicios externos para funcionalidades críticas como el procesamiento de pagos (Stripe) y el envío de notificaciones por correo electrónico (Gmail).
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/juantaln/ecommerce-api" class="button-outline" target="_blank">Ver Repositorio (GitHub)</a>
+            <a href="https://ecommerce-api-8ujg.onrender.com" class="button" target="_blank">Ver Demo en Vivo (Render)</a>
+        </div>
+    </div>
+
+    <div class="project-section">
+        <h2 class="section-heading">Conceptos y Prácticas Implementadas</h2>
+        <ul class="concepts-list">
+            <li>
+                <strong>Gestión de Roles con Spring Security:</strong> Se implementó un robusto sistema de autorización basado en roles para diferenciar las capacidades de los usuarios. Los administradores (`ADMIN`) tienen control total sobre el catálogo de productos, mientras que los clientes (`CUSTOMER`) pueden gestionar sus propias órdenes de compra.
+            </li>
+            <li>
+                <strong>Integración de Pasarela de Pagos (Stripe):</strong> La API se conecta con el servicio de Stripe para simular la creación de "Payment Intents". Esto demuestra la capacidad de integrar sistemas de pago, un componente esencial en cualquier aplicación de e-commerce.
+            </li>
+            <li>
+                <strong>Servicio de Notificaciones por Correo (Gmail):</strong> Tras una compra exitosa, el sistema utiliza la API de Gmail para enviar automáticamente un correo de confirmación al cliente. Esta funcionalidad muestra la habilidad para integrar servicios de comunicación y automatizar procesos post-transacción.
+            </li>
+            <li>
+                <strong>Modelo de Datos Relacional Complejo:</strong> Se utilizó Spring Data JPA para mapear y gestionar las complejas relaciones entre las entidades `User`, `Product`, `Order` y `OrderItem`, asegurando la integridad de los datos a través de la capa de persistencia.
+            </li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <h2 class="section-heading">Demostración del Proyecto</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <h3>Explicación en Español</h3>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/PvvQtwJ-smU?si=Zi2ieQcC-7QWYzVu" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-container">
+                <h3>Explicación en Inglés</h3>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/BooQFQn8Msk?si=zert45deG50Ecb3P" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</LayoutProject>
+
+<style>
+    /* Estilos SOLO para el contenido de esta página */
+    .project-title {
+        font-size: 2.8rem;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 1.5rem;
+    }
+    .project-section {
+        margin-bottom: 3rem;
+    }
+    .section-heading {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+    .section-text, .concepts-list {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        max-width: 850px;
+        color: var(--text-color);
+    }
+    .concepts-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .concepts-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    .concepts-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    .video-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    @media (min-width: 992px) {
+        .video-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .video-container h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    .video-container video {
+        width: 100%;
+        border-radius: .5rem;
+        border: 1px solid #334155;
+        background-color: #000;
+    }
+   
+    .project-links {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .button, .button-outline {
+        display: inline-block;
+        padding: 0.9rem 1.75rem;
+        border-radius: .5rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.3s;
+    }
+
+    .button:hover, .button-outline:hover {
+        transform: translateY(-3px);
+    }
+
+    .button {
+        background-color: var(--primary-color);
+        color: #000;
+    }
+
+    .button-outline {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+    .video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 de los videos */
+    border-radius: .5rem;
+    border: 1px solid #334155;
+    }
+</style>
